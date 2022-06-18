@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - order</title>
+
+    <style>
+        .flex-container{
+            display: flex;
+            border: 1px solid black;
+            margin-bottom: 100px;
+            max-width: 300px;
+        }
+
+        .item{
+            flex: 1;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+        }
+
+        .o-1{
+            order: 1;
+        }
+        .o-2{
+            order: 2;
+        }
+        .o-3{
+            order: 3;
+        }
+
+        .o-4{
+            order: 4;
+        }
+
+        .direction{
+            flex-direction: column;
+        }
+
+        .on-1{
+            order: -1;
+        }
+        .on-2{
+            order: -2;
+        }
+        .on-3{
+            order: -3;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <p>order = 0</p>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+    <p>order = diferentes</p>
+    <div class="flex-container">
+        <div class="item o-3">1</div>
+        <div class="item o-2">2</div>
+        <div class="item 0-4">3</div>
+        <div class="item o-1">4</div>
+    </div>
+    
+    <p>order = diferentes / column</p>
+    <div class="flex-container direction">
+        <div class="item o-3">1</div>
+        <div class="item o-2">2</div>
+        <div class="item 0-4">3</div>
+        <div class="item o-1">4</div>
+    </div>
+
+    <p>order = valores negativos / column</p>
+    <div class="flex-container direction">
+        <div class="item o-3">1</div>
+        <div class="item on-2">2</div>
+        <div class="item 0-4">3</div>
+        <div class="item on-1">4</div>
+    </div>
+</body>
+</html>
